@@ -1,4 +1,13 @@
 import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from '@next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: "metada",
+  description: "testing metadata"
+}
 
 export default function RootLayout({
   children,
@@ -12,7 +21,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className={inter.className}>
         <nav><h1>my nav bar</h1></nav>
         {children}
         </body>
